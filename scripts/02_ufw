@@ -1,4 +1,9 @@
 function f_firewall {
+  if [[ $FW == "N" ]]; then
+    echo "[$SCRIPT_COUNT] Skipping ufw"
+    return
+  fi
+
   echo "[$SCRIPT_COUNT] Enable ufw"
 
   if ! test -f "$UFWDEFAULT"; then

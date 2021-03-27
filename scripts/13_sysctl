@@ -13,6 +13,11 @@ function f_sysctl {
     echo "net.ipv6.conf.$n.accept_ra_rtr_pref = 0" >> "$SYSCTL"
   done
 
+  if [[ $ENABLE_FORWARDING == "Y" ]]; then
+    echo "net.ipv4.ip_forward = 1" >> "$SYSCTL"
+  fi
+
+
   chmod 0600 "$SYSCTL"
   systemctl restart systemd-sysctl
 
