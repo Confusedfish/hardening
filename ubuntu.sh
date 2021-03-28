@@ -144,7 +144,7 @@ function main {
   f_cron
   f_ctrlaltdel
   f_auditd
-  f_aide
+#  f_aide
   f_rhosts
   f_users
   f_lockroot
@@ -154,8 +154,8 @@ function main {
   f_umask
   f_path
   f_aa_enforce
-  f_aide_post
-  f_aide_timer
+#  f_aide_post
+#  f_aide_timer
   f_aptget_noexec
   f_aptget_clean
   f_systemddelta
